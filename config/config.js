@@ -1,9 +1,9 @@
-import nconf from 'nconf';
+import nconf from "nconf";
 
 // Get all default config from the config file
 nconf.file(
   {
-    file: './config.json'
+    file: "./config.json"
   }
 );
 

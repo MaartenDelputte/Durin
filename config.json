@@ -1,6 +1,14 @@
 {
   "js": {
     "output": "./dist/js-app",
-    "entryPoints": ["./src/js/main.js"]
+    "entryPoints": [
+      "./src/js/main.js"
+    ]
+  },
+  "css": {
+    "output": "./dist/css",
+    "entryPoints": [
+      "./src/scss/style.scss"
+    ]
   }
 }

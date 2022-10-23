@@ -1,17 +1,18 @@
 #!/usr/bin/env node
 
-import chalk from 'chalk';
-import figlet from 'figlet';
-import inquirer from 'inquirer';
-import { buildJs } from './../lib/build-js.js';
+import chalk from "chalk";
+import figlet from "figlet";
+import inquirer from "inquirer";
+import { buildJs } from "./../lib/build-js.js";
+import { buildCss } from "./../lib/build-css.js";
 
 // Show start message
 console.log(
   chalk.yellow(
     figlet.textSync(
-      'DURIN',
+      "DURIN",
       {
-        horizontalLayout: 'full'
+        horizontalLayout: "full"
       })
   )
 );
@@ -19,24 +20,24 @@ console.log(
 // Set the valid commands with name, value and logic
 const commands = [
   {
-    'name': 'build CSS (production)',
-    'value': 'build-css',
-    'run': () => console.log('log build css')
+    "name": "build CSS (production)",
+    "value": "build-css",
+    "run": () => buildCss()
   },
   {
-    'name': 'watch CSS (development)',
-    'value': 'watch-css',
-    'run': () => console.log('log watch css')
+    "name": "watch CSS (development)",
+    "value": "watch-css",
+    "run": () => buildCss(true)
   },
   {
-    'name': 'build JS (production)',
-    'value': 'build-js',
-    'run': () => buildJs()
+    "name": "build JS (production)",
+    "value": "build-js",
+    "run": () => buildJs()
   },
   {
-    'name': 'watch JS (development)',
-    'value': 'watch-js',
-    'run': () => buildJs(true)
+    "name": "watch JS (development)",
+    "value": "watch-js",
+    "run": () => buildJs(true)
   },
 ]
 
@@ -44,9 +45,9 @@ const commands = [
 inquirer
   .prompt([
     {
-      type: 'list',
-      name: 'command',
-      message: 'What can the great Durin do for you lad?',
+      type: "list",
+      name: "command",
+      message: "What can the great Durin do for you lad?",
       choices: commands.map(item => {
         // Get the name and value
         const { name, value } = item;
