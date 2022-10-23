@@ -1,14 +1,24 @@
 {
   "js": {
     "output": "./dist/js-app",
-    "entryPoints": [
-      "./src/js/main.js"
-    ]
+    "entryPoints": ["./src/js/main.js"]
   },
   "css": {
     "output": "./dist/css",
-    "entryPoints": [
-      "./src/scss/style.scss"
-    ]
-  }
+    "entryPoints": ["./src/scss/style.scss"],
+    "lintFiles": ["src/scss/**/*.scss"]
+  },
+  "externalFiles": [
+    "*.svg",
+    "*.jpg",
+    "*.jpeg",
+    "*.gif",
+    "*.png",
+    "*.json",
+    "*.eot",
+    "*.ttf",
+    "*.woff",
+    "*.woff2",
+    "../../fonts/*"
+  ]
 }
