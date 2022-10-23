@@ -1,0 +1,6 @@
+{
+  "js": {
+    "output": "./dist/js-app",
+    "entryPoints": ["./src/js/main.js"]
+  }
+}
